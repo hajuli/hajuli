@@ -1,0 +1,159 @@
+<html>
+<head>
+</head>
+<body>
+	<h2 align="center" style="color:red">start</h2>
+	<form action="" method="get">
+		<input type="submit" value="submit"> <input type="reset" value="reset">
+	</form>
+	<form action=/cgi-bin/post-query method=POST>
+		您的姓名: 
+		<input type=text name=姓名><br>
+		您的主页的网址: 
+		<input type=text name=网址 value="http://"><br>
+		密码: 
+		<input type=password name=密码><br>
+		<input type=submit value="发送"><input type=reset value="重设">
+	</form>
+	<form action=/cgi-bin/post-query method=POST>
+		<input type=text name=a01 size=40><br>
+		<input type=text name=a02 maxlength=5><br>
+		<input type=submit><input type=reset>
+	</form>
+	<form action=/cgi-bin/post-query method=POST>
+		<input type=checkbox name=水果1>
+		        Banana<p>
+		<input type=checkbox name=水果2 checked>
+		        Apple<p>
+		<input type=checkbox name=水果3 value=橘子 checked="checked">
+		        Orange<p>
+		<input type=submit><input type=reset>
+	</form>
+	<form action=/cgi-bin/post-query method=POST>
+		<input type=radio name=水果>
+		        Banana<p>
+		<input type=radio name=水果 checked>
+		        Apple<p>
+		<input type=radio name=水果 value=橘子>
+		        Orange<p>
+		<input type=submit><input type=reset>
+	</form>
+	<form action=/cgi-bin/post-query method=POST>
+		<input type=image name=face src=f.gif><p>
+		<input type=radio name=zoom value=2 checked>x2
+		<input type=radio name=zoom value=4>x4
+		<input type=radio name=zoom value=6>x6<p>
+		<input type=reset>
+	</form>
+	<form action=/cgi-bin/post-query method=POST>
+		<input type=hidden name=add value=hoge@hoge.jp>
+		Here is a hidden element. <p>
+		<input type=submit><input type=reset>
+	</form>
+	<form action=/cgi-bin/post-query method=POST>
+		<select name=fruits>
+		        <option>Banana
+		        <option selected>Apple
+		        <option value=My_Favorite>Orange
+		</select><p>
+		<input type=submit><input type=reset>
+	</form>
+	<form action=/cgi-bin/post-query method=POST>
+		<select name=fruits size=3 multiple="multiple">
+		        <option>Banana
+		        <option selected>Apple
+		        <option value=My_Favorite>Orange
+		        <option>Peach
+		        <option>python
+		</select><p>
+		<input type=submit><input type=reset>
+	</form>
+	<form action=/cgi-bin/post-query method=POST>
+		<textarea name=comment rows=5 cols=60 wrap="soft">start
+		</textarea>
+		<P>
+		<input type=submit><input type=reset>
+	</form>
+	<table border>
+		<tr><th style="color:red">Food</th><th>Drink</th><th>Sweet</th>
+		<tr><td>A</td><td>B</td><td>C</td>      
+	</table>
+	<table border>
+		<tr><th colspan=3> Morning Menu</th>
+		<tr><th>Food</th><th>Drink</th><th>Sweet</th>
+		<tr><td>A</td><td>B</td><td>C</td>
+	</table>
+	<table border="2">
+		<tr><th rowspan="3"> Morning Menu</th>
+		     <th>Food</th> <td>A</td></tr>
+		<tr><th>Drink</th> <td>B</td></tr>
+		<tr><th>Sweet</th> <td>C</td></tr>
+	</table>
+	<table border=10>
+		<tr><th>Food</th><th>Drink</th><th>Sweet</th>
+		<tr><td>A</td><td>B</td><td>C</td>      
+	</table>
+	<table border width=170 height=150>
+		<tr><th>Food</th><th>Drink</th><th>Sweet</th>
+		<tr><td>A</td><td>B</td><td>C</td>      
+	</table>
+	<table border="1" cellspacing=10 bgcolor="#80ffff">
+		<tr><th>Food</th><th>Drink</th><th>Sweet</th>
+		<tr><td>A</td><td>B</td><td>C</td>      
+	</table>
+	<table border width=160>
+		<tr><th>Food</th><th>Drink</th><th>Sweet</th>
+		<tr>
+		    <td align=left>A</td>
+		    <td align=center>B</td>
+		    <td align=right>C</td>  
+	</table>
+	<table border height=100>
+		<tr>
+		                <th>Food</th><th>Drink</th>
+		                <th>Sweet</th><th>Other</th>
+		<tr>
+		                <td valign=top>A</td>
+		                <td valign=middle>B</td>
+		                <td valign=bottom>C</td>
+		                <td valign=baseline>D</td>
+	</table>
+	<table border align="center">
+		<caption align=center>Lunch</caption>
+		<tr><th>Food</th><th>Drink</th><th>Sweet</th>
+		<tr><td>A</td><td>B</td><td>C</td>      
+	</table>
+	<table border>
+		<caption valign="bottom">Lunch</caption>
+		<tr><th>Food</th><th>Drink</th><th>Sweet</th>
+		<tr><td>A</td><td>B</td><td>C</td>      
+	</table>
+	<table border>
+		<tr><th bgcolor=ffaa00>Food</th>
+		    <th bgcolor=Red>Drink</th>
+		    <th rowspan=2 background="image.gif">Sweet</th>
+		<tr bgcolor=white><td>A</td><td>B</td>
+	</table>
+	<table cellspacing=5 border=5 bordercolorlight=White bordercolordark=Maroon>
+		<tr><th>Food</th><th>Drink</th><th>Sweet</th>
+		<tr><td>A</td><td>B</td><td>C</td>      
+	</table>
+	<table border frame="box">
+		<thead>
+		     <tr><th>Food</th><th>Drink</th><th>Sweet</th>
+		</thead>
+		<tbody>
+		     <tr><td>A</td><td>B</td><td>C</td>
+		     <tr><td>D</td><td>E</td><td>F</td>
+		</tbody>
+	</table>
+	
+
+	
+	
+	
+	
+	
+	
+</body>
+</html>
