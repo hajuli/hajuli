@@ -13,4 +13,4 @@ Add your content here.  Format your content with:
   * Automatic links to other wiki pages
  
 * 文档（目前以SVN的形式组织）
-  * 位置：http://code.google.com/p/walle/source/browse/trunk
+  * 位置：http://hajuli.googlecode.com/svn/trunk/
