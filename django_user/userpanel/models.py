@@ -35,7 +35,7 @@ class UserProfile(models.Model):
             a = str(self.id)+'.jpg';
         return settings.AVATAR_URL_PREFIX + a
 
-admin.site.register(UserProfile)
+#admin.site.register(UserProfile)
 
 class CollectionPhoto(models.Model):
     """

@@ -137,4 +137,7 @@ def avatar(request):
 ###///////
 
 def home(request):
-    return render_to_response('index.html')
+    context_map=get_base_context_map(request)
+    return render_to_response('index.html',context_map)
+
+
