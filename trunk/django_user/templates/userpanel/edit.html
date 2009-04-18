@@ -7,15 +7,15 @@
 {% endblock %}
 
 {% block breadcrumb %}
-<span><a href="/">首页</a></span>&gt;
-<span><a href="/space/{{user.id}}/">个人中心</a></span>&gt;
+<span><a href="/hajuli/">首页</a></span>&gt;
+<span><a href="/hajuli/space/{{user.id}}/">个人中心</a></span>&gt;
 <span id="breadcurrent">更换个人信息</span> 
 {% endblock %}
 
 ﻿{% block layoutmid_content %}
 		<div id="content">
 			<div id="content_list">
-<form name="uuform" id="uuform" action="/userpanel/edit/" method="post"><fieldset class="login">
+<form name="uuform" id="uuform" action="/hajuli/userpanel/edit/" method="post"><fieldset class="login">
 <legend>更新您的个人信息设置</legend>
 	<div>
 		<label for="UserPermaName">永久用户名</label>
