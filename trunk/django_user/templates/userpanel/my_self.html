@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}
+老照片 - {{view_user.username}}的个人中心
+{% endblock %}
+{% block ext_style %}
+#layoutmid {margin-left: 20px; min-height: 300px; margin-right: 210px;}#layoutright { width: 200px;}
+#layoutleft {width: 10px;}
+{% endblock %}
+
+﻿{% block layoutright %}	
+<div class="userprofile bglb roundC">
+<ul>
+  <li><a href="/space/{{view_user.id}}/"><img class="img_border" src="{{view_user.get_profile.get_avatar}}"></a>
+  <a href="/space/{{view_user.id}}/"> {{view_user}} </a>
+  </li>
+  <li>
+{% if is_self %}
+  <a href="/hajuli/userpanel/avatar/"> 更换头像</a>
+{% endif %}
+  </li>
+{% if not is_self and user.is_authenticated %}
+  {% if not friend %}
+  <li><a href="/hajuli/space/add_friend/{{view_user.id}}/">把{{view_user.username}}加为好友</a></li>
+  {% else %}
+  <li><a href="/hajuli/space/drop_friend/{{friend.id}}/">取消与{{view_user.username}}的朋友关系</a></li>
+  {% endif %}
+  <li><a href="/hajuli/msgbox/compose_message/{{view_user.id}}/">给{{view_user.username}}写信</a></li>
+{% endif %}
+</ul>
+</div>
+
+{% if is_self %}
+<div class="userprofile bgpink roundC">
+<p class="greentitle">个人信息管理</p>
+<ul class="orange_bullet">
+	<li><a href="/hajuli/userpanel/updatepswd/"> 修改密码</a></li>
+	<li><a href="/hajuli/userpanel/edit/">更新个人信息	</a></li>
+	<li><a href="/hajuli/msgbox/inbox/">我的信箱(xxx封未读)</a></li>
+	<li><a href="/hajuli/photos/upload/"><b class="red">上传照片</b></a></li>
+</ul>
+</div>
+{% endif %}
+
+{% if is_self %}
+<div class="usernews bggrey roundC">
+<h3 class="heading">{{view_user}}图片的新留言</h3>
+<ul>
+{% for o in r_c %}
+<li><a href="/photos/{{o.photo.id}}/">{{o.get_short_comment}}</a>&nbsp;（{{o.author.username}}）</li>
+{% endfor %}
+</ul>
+<div align="right"><a href="/space/all_4me_comments/{{view_user.id}}/">更多&gt;&gt;&nbsp;</a>&nbsp;&nbsp;&nbsp;</div>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block layoutmid %}
+{% endblock %}

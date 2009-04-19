@@ -72,7 +72,7 @@ def updatepswd(request, next_page=None):
         if form.is_valid():
             u.set_password(form.cleaned_data['new_pswd'])
             u.save()
-            return HttpResponseRedirect('/hajuli/space/')
+            return HttpResponseRedirect('/hajuli/userpanel/my_self')
     context_map['form']=form
     return render_to_response('userpanel/updatepswd.html',context_map)
 
@@ -90,7 +90,7 @@ def edit(request):
             user.get_profile().blog=data['blog']
             user.get_profile().intro=data['intro']
             user.get_profile().save()
-            return HttpResponseRedirect('/space/')
+            return HttpResponseRedirect('/hajuli/userpanel/my_self')
     context_map['form']=form
     return render_to_response('userpanel/edit.html',context_map)
 
@@ -130,7 +130,7 @@ def avatar(request):
             else:
                 user.get_profile().avatar=''
             user.get_profile().save()
-            return HttpResponseRedirect('/hajuli/space/')
+            return HttpResponseRedirect('/hajuli/userpanel/my_self')
     context_map['form']=form
     return render_to_response('userpanel/avatar.html',context_map)
 
@@ -139,5 +139,13 @@ def avatar(request):
 def home(request):
     context_map=get_base_context_map(request)
     return render_to_response('index.html',context_map)
+
+def my_self(request):
+    context_map=get_base_context_map(request)
+    user = request.user
+    context_map['user'] = user
+    context_map['is_self']=True
+    return render_to_response('userpanel/my_self.html',context_map)
+
 
 
