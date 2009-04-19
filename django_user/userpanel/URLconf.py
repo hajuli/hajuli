@@ -8,4 +8,5 @@ urlpatterns = patterns('django_user.userpanel',
                        (r'^edit/$', 'views.edit'),
                        (r'^updatepswd/$', 'views.updatepswd'),
                        (r'^avatar/$', 'views.avatar'),
+                       (r'^my_self/$', 'views.my_self'),
 )
