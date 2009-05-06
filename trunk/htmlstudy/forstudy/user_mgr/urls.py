@@ -1,11 +1,10 @@
-
 from django.conf.urls.defaults import *
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
 
-urlpatterns = patterns('djangotest',
+urlpatterns = patterns('user_mgr',
     # Example:
     # (r'^forstudy/', include('forstudy.foo.urls')),
 
@@ -16,8 +15,6 @@ urlpatterns = patterns('djangotest',
     # Uncomment the next line to enable the admin:
     # (r'^admin/(.*)', admin.site.root),
     
-    (r'^home/', 'forstudy.home.index'),
-    (r'^test/', include('forstudy.test.urls')),
-    (r'^gg/', include('forstudy.gg.urls')),
-    (r'^user_mgr/', include('user_mgr.views.urls'))
+    (r'^sign_up/$', 'views.sign_up'),
+    (r'^sign_in/', 'views.sign_in'),
 )
