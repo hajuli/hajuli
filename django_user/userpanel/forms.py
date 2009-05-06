@@ -45,7 +45,7 @@ class UpdatePswdForm(forms.Form):
 
 class SignupForm(forms.Form):
     username = forms.CharField(max_length=40, widget=forms.widgets.TextInput(\
-        attrs={'style':'width: 10em;'}), label='登录名')
+        attrs={'style':'width: 10em; color:red'}), label='登录名')
     password = forms.CharField(max_length=40,\
         widget=forms.widgets.PasswordInput(attrs={'style':'width: 10em;'}),\
         label='密码')
