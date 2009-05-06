@@ -48,6 +48,10 @@ MEDIA_URL = ''
 # Examples: "http://foo.com/media/", "/media/".
 ADMIN_MEDIA_PREFIX = '/media/'
 
+#==== jun add
+AUTH_PROFILE_MODULE = 'userpanel.UserProfile'
+#====
+
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '8=@zao&%b@2ds+0m*s4o%3z$te$36h&4r1n+sazmfi7l^!j_47'
 
